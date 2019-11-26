@@ -94,7 +94,7 @@ def delete_single_order(id):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute("DELETE from products WHERE id = %s", id)
         conn.commit()
-        resp = jsonify ('Order deleted successfuly')
+        resp = jsonify ('Order deleted successfully')
         resp.status_code = 200
         return resp
     except Exception as e:
