@@ -4,7 +4,7 @@ from db_config import mysql
 from flask import jsonify
 from flask import flash, request
 
-@app.route('/neworders', methods=['GET'])
+@app.route('/orders', methods=['GET'])
 def fetch_all_orders():
     try:
         conn = mysql.connect()
@@ -44,7 +44,7 @@ def add_order():
         cursor.close()
         conn.close()
 
-@app.route('/neworders/update', methods = ['PUT'])
+@app.route('/orders/update', methods = ['PUT'])
 def update_order():
     try:
         json = request.json
@@ -70,5 +70,23 @@ def update_order():
         conn.close()
 
 
+@app.route('/orders/<int:id>')
+def fetch_single_order(id):
+    try:
+        conn = mysql.connect()
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute("SELECT * from products WHERE id = %s", id)
+        row = cursor.fetchone()
+        resp = jsonify(row)
+        resp.status_code = 200
+        return resp
+    except Exception as e:
+        print(e)
+    finally:
+        cursor.close()
+        conn.close()
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
