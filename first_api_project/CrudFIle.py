@@ -92,7 +92,7 @@ def fetch_single_order(id):
 def delete_single_order(id):
     try:
         conn = mysql.connect()
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor = conn.cursor()
         cursor.execute("DELETE from products WHERE id = %s", id)
         conn.commit()
         resp = jsonify ('Order deleted successfully')
@@ -104,6 +104,18 @@ def delete_single_order(id):
         cursor.close()
         conn.close()
 
+@app.route('/orders/deleteall/')
+def delete_all_orders():
+    try:
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM products")
+        conn.commit()
+        resp = jsonify("Orders deleted successfully")
+        resp.status_code = 200
+        return resp
+    except Exception as e:
+        print(e)
 
 
 if __name__ == "__main__":
