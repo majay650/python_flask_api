@@ -3,6 +3,7 @@ from app import app
 from db_config import mysql
 from flask import jsonify
 from flask import flash, request
+from app_errors import *
 
 @app.route('/orders', methods=['GET'])
 def fetch_all_orders():
@@ -77,7 +78,7 @@ def fetch_single_order(id):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute("SELECT * from products WHERE id = %s", id)
         row = cursor.fetchone()
-        resp = jsonify(row)
+        resp = jsonify1(row)
         resp.status_code = 200
         return resp
     except Exception as e:
@@ -102,6 +103,7 @@ def delete_single_order(id):
     finally:
         cursor.close()
         conn.close()
+
 
 
 if __name__ == "__main__":
