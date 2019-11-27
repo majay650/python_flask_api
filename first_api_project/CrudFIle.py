@@ -78,7 +78,7 @@ def fetch_single_order(id):
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute("SELECT * from products WHERE id = %s", id)
         row = cursor.fetchone()
-        resp = jsonify1(row)
+        resp = jsonify(row)
         resp.status_code = 200
         return resp
     except Exception as e:
