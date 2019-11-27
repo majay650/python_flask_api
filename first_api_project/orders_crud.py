@@ -10,7 +10,7 @@ def fetch_all_orders():
     try:
         conn = mysql.connect()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute("SELECT * from products")
+        cursor.execute("SELECT * from orders")
         rows = cursor.fetchall()
         resp = jsonify(rows)
         resp.status_code = 200
@@ -21,7 +21,7 @@ def fetch_all_orders():
         cursor.close()
         conn.close()
 
-@app.route('/add', methods=['POST'])
+@app.route('/orders/add', methods=['POST'])
 def add_order():
     try:
         json = request.json
@@ -30,7 +30,7 @@ def add_order():
         quantity = json['quantity']
         # validate the received values
         if name and model and quantity and request.method == 'POST':
-            sql = "INSERT INTO products(name, model, quantity) VALUES(%s, %s, %s)"
+            sql = "INSERT INTO orders(name, model, quantity) VALUES(%s, %s, %s)"
             data = (name, model, quantity,)
             conn = mysql.connect()
             cursor = conn.cursor()
@@ -55,7 +55,7 @@ def update_order():
         quantity = json['quantity']
         # validate the received values
         if name and model and quantity and id and request.method == 'PUT':
-            sql = "UPDATE products SET name=%s, model=%s, quantity=%s WHERE id=%s"
+            sql = "UPDATE orders SET name=%s, model=%s, quantity=%s WHERE id=%s"
             data = (name, model, quantity, id,)
             conn = mysql.connect()
             cursor = conn.cursor()
@@ -76,7 +76,7 @@ def fetch_single_order(id):
     try:
         conn = mysql.connect()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute("SELECT * from products WHERE id = %s", id)
+        cursor.execute("SELECT * from orders WHERE id = %s", id)
         row = cursor.fetchone()
         resp = jsonify(row)
         resp.status_code = 200
@@ -93,7 +93,7 @@ def delete_single_order(id):
     try:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute("DELETE from products WHERE id = %s", id)
+        cursor.execute("DELETE from orders WHERE id = %s", id)
         conn.commit()
         resp = jsonify ('Order deleted successfully')
         resp.status_code = 200
@@ -109,7 +109,7 @@ def delete_all_orders():
     try:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute("DELETE FROM products")
+        cursor.execute("DELETE FROM orders")
         conn.commit()
         resp = jsonify("Orders deleted successfully")
         resp.status_code = 200
@@ -117,7 +117,22 @@ def delete_all_orders():
     except Exception as e:
         print(e)
 
-
+# @app.route('/users', methods = ['GET'])
+# def fetch_all_users():
+#     try:
+#         conn = mysql.connect()
+#         cursor = conn.cursor(pymysql.cursors.DictCursor)
+#         cursor.execute("SELECT * from users")
+#         rows = cursor.fetchall()
+#         resp = jsonify(rows)
+#         resp.status_code = 200
+#         return resp
+#     except Exception as e:
+#         print(e)
+#     finally:
+#         cursor.close()
+#         conn.close()
+#
 if __name__ == "__main__":
     app.run(debug=True)
 
