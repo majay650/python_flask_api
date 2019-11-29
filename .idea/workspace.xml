@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="925b5f74-f35c-4414-aca2-d24f6f53f177" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/first_api_project/users_crud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_api_project/CrudFIle.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_api_project/orders_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_api_project/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_api_project/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_api_project/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_api_project/db_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_api_project/orders_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_api_project/orders_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_api_project/users_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_api_project/users_crud.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_api_project/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="162">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -26,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/first_api_project/orders_crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            <state relative-caret-position="94">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -38,14 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_api_project/users_crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="43">
+              <caret line="8" column="18" selection-start-line="8" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -74,7 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_api_project/db_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="204">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -104,7 +104,10 @@
       <list>
         <option value="$PROJECT_DIR$/first_api_project/app_errors.py" />
         <option value="$PROJECT_DIR$/first_api_project/CrudFIle.py" />
+        <option value="$PROJECT_DIR$/first_api_project/app.py" />
+        <option value="$PROJECT_DIR$/first_api_project/db_config.py" />
         <option value="$PROJECT_DIR$/first_api_project/users_crud.py" />
+        <option value="$PROJECT_DIR$/first_api_project/orders_crud.py" />
       </list>
     </option>
   </component>
@@ -249,7 +252,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -257,7 +260,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.30932897" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.2667758" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -268,25 +271,11 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/first_api_project/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/first_api_project/app.py">
+    <entry file="file://$PROJECT_DIR$/first_api_project/forms.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1055577769/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/first_api_project/db_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="87669">
+          <caret line="5157" column="12" lean-forward="true" selection-start-line="5157" selection-start-column="12" selection-end-line="5157" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -300,27 +289,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1055577769/builtins.py">
+    <entry file="file://$PROJECT_DIR$/first_api_project/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87669">
-          <caret line="5157" column="12" lean-forward="true" selection-start-line="5157" selection-start-column="12" selection-end-line="5157" selection-end-column="12" />
+        <state relative-caret-position="162">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_api_project/orders_crud.py">
+    <entry file="file://$PROJECT_DIR$/first_api_project/db_config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/first_api_project/users_crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        <state relative-caret-position="43">
+          <caret line="8" column="18" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_api_project/orders_crud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
