@@ -6,12 +6,12 @@ from functools import wraps
 
 app = Flask(__name__)
 
-def auth_required(f):
-    @wraps(f)
+def auth_required(function):
+    @wraps(function)
     def decorated(*args, **kwargs):
         auth = request.authorization
         if auth and auth.username == "ajay" and auth.password == 'password':
-            return f(*args, **kwargs)
+            return function(*args, **kwargs)
         return "credentials are incorrect"
     return decorated
 

@@ -13,7 +13,7 @@ from functools import wraps
 
 
 @app.route('/users', methods = ['GET'])
-@auth_required
+# @auth_required
 def fetch_all_users():
     try:
         # conn = mysql.connect()
@@ -30,7 +30,7 @@ def fetch_all_users():
         conn.close()
 
 @app.route('/users/add', methods = ['POST'])
-@auth_required
+# @auth_required
 def add_user():
     first_name = request.json.get('first_name')
     last_name = request.json.get('last_name')

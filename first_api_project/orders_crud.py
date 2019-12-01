@@ -5,9 +5,12 @@ from flask import jsonify
 from flask import flash, request
 from app_errors import *
 from db_config import conn
+from app import auth_required
+# from users_crud import *
 
 
 @app.route('/orders', methods=['GET'])
+# @auth_required
 def fetch_all_orders():
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -18,9 +21,9 @@ def fetch_all_orders():
         return resp
     except Exception as e:
         print(e)
-    finally:
-        cursor.close()
-        conn.close()
+    # finally:
+    #     cursor.close()
+    #     conn.close()
 
 @app.route('/orders/add', methods=['POST'])
 def add_order():
@@ -41,9 +44,9 @@ def add_order():
             return resp
     except Exception as e:
         print(e)
-    finally:
-        cursor.close()
-        conn.close()
+    # finally:
+    #     cursor.close()
+    #     conn.close()
 
 @app.route('/orders/update', methods = ['PUT'])
 def update_order():
@@ -65,9 +68,9 @@ def update_order():
             return resp
     except Exception as e:
         print(e)
-    finally:
-        cursor.close()
-        conn.close()
+    # finally:
+    #     cursor.close()
+    #     conn.close()
 
 
 @app.route('/orders/<int:id>')
@@ -81,9 +84,9 @@ def fetch_single_order(id):
         return resp
     except Exception as e:
         print(e)
-    finally:
-        cursor.close()
-        conn.close()
+    # finally:
+    #     cursor.close()
+    #     conn.close()
 
 
 @app.route('/orders/delete/<int:id>', methods=['DELETE'])
@@ -97,9 +100,9 @@ def delete_single_order(id):
         return resp
     except Exception as e:
         print(e)
-    finally:
-        cursor.close()
-        conn.close()
+    # finally:
+    #     cursor.close()
+    #     conn.close()
 
 @app.route('/orders/deleteall/')
 def delete_all_orders():
@@ -113,7 +116,7 @@ def delete_all_orders():
     except Exception as e:
         print(e)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+#
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
